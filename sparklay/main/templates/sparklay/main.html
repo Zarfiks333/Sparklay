@@ -1,0 +1,15 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css\sparkly\style.css" %}">
+    <title>{{title}}</title>
+</head>
+<body>
+    <p style="color: wheat;">Тута</p>
+    <a href="{% url 'user:logout' %}" style="color: wheat;"> выйти</a>
+</body>
+</html>

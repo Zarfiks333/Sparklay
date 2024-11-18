@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Dela+Gothic+One&family=Geologica:wght@100..900&family=Roboto+Slab:wght@100..900&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Geologica:wght@100..900&family=Roboto+Slab:wght@100..900&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    background-color: rgb(40, 37, 51);
+}
+
+html{
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main::before{
+    content: '';
+    bottom: -15%;
+    left: -10%;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #7650A0;
+    filter: blur(200px);
+    animation: size 10s infinite; 
+}
+
+main::after{
+    content: '';
+    top: -15%;
+    right: -10%;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #7650A0;
+    filter: blur(200px);
+    animation: size 10s infinite; 
+}
+
+@keyframes size {   
+    0% {     
+        filter: blur(200px);
+    }   
+    
+    50% {     
+        filter: blur(160px);
+    }
+
+    100% {
+        filter: blur(200px);
+    }
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin: 20px 50px;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.logo a{
+    display: flex;
+    align-items: center;
+    font-family: "Bakbak One", sans-serif;
+    font-size: 40px;
+    color: white;
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.container{
+    border-radius: 30px;
+    height: auto;
+    min-height: 500px;
+    width: 600px;
+    position:  relative;
+    background-color: rgba(150, 119, 185, 0.062);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    width: 80%;
+}
+
+.form_label{
+    display: flex;
+    font-family: "Geologica", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    color: white;
+}
+
+.form_input{
+    margin: 10px 0 10px 0;
+    color: #ffffff;
+    width: 80%;
+    background-color: rgba(150, 119, 185, 0.247);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.text-tablo{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(214, 214, 214);
+    font-weight: 400;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.login_btn button{
+    width: 80%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 7px 15px;
+    background-color: #7650A0;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 7px;
+    font-size: 20px;
+    font-family: "Geologica", sans-serif;
+}
+
+.login_btn button:hover{
+    opacity: 0.9;
+}
+
+.login_btn button:active{
+    position: relative;
+    top: 1px;
+}
+
+.fr2{
+    align-items: center;
+    display: flex;
+}
+
+.fr2 a{
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.fr2 a:hover{
+    text-decoration: underline;
+}
+
+.reset-password-link a{
+    font-family: "Geologica", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.reset-password-link a:hover{
+    text-decoration: underline;
+}
+
+.messages {
+    margin: 10px 0;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    font-family: "Geologica", sans-serif;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    font-family: "Geologica", sans-serif;
+    background-color: #f8d7da;
+    color: #721c24;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Dela+Gothic+One&family=Geologica:wght@100..900&family=Roboto+Slab:wght@100..900&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Geologica:wght@100..900&family=Roboto+Slab:wght@100..900&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&display=swap');
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    height: 90px;
+    padding: 0 10%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo a{
+    font-family: "Bakbak One", sans-serif;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+}
+
+.header-menu ul{
+    position: relative;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.header-menu button{
+    font-size: 17px;
+    display: flex;
+    font-family: "Geologica", sans-serif;
+    border: none;
+    background: none repeat;
+    color: white;
+}
+
+.header-menu button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.header-menu button p{
+    font-weight: 800;
+}
+
+.login-btn{
+    display: flex;
+    align-self: center;
+}
+
+.login-btn button{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    font-family: "Geologica", sans-serif;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    background: linear-gradient(150deg, rgba(115,77,158,1) 0%, rgb(150, 119, 185) 100%);
+    padding: 15px 20px;
+}
+
+.login-btn button:hover::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3.2px;
+    width: 103%;
+    height: 110%;
+    border: solid 1px rgb(150, 119, 185);
+    border-radius: 16px;
+}
+

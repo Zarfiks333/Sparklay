@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css\loginoregister\login.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>{{title}}</title>
+</head>
+<body>
+    <div class="logo">
+        <a href="/">
+            <img src="/static/images/icons/a3137d467ae76275 (2).png" alt="" style="width: 60px; height: 60px; margin-right: 5px;">
+                Sparklay
+        </a>
+    </div>
+    <main>
+        <div class="container">
+            <div class="text-tablo">
+                <h1>Где ты был ?</h1>
+                <p style="opacity: 0.6;">мы тебе ждали</p>
+            </div>
+            <form action="{% url 'user:loginOrSingIn' %}" method="post">
+
+                <div id="logins_btn" class="forum-login">
+                    {% csrf_token %}
+             
+                    {% if messages %}
+                        <div class="messages">
+                            {% for message in messages %}
+                                <div class="message {{ message.tags }}">
+                                    {% if message.tags == "success" %}
+                                        <p class="success">{{ message }}</p>
+                                    {% elif message.tags == "error" %}
+                                        <p class="error">{{ message }}</p>
+                                    {% else %}
+                                        <p>{{ message }}</p>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    <label for="email" class="form_label" data-icon="u" > адрес электронной почты <span style="color: brown;">*</span></label>
+                    <input id="email" name="email" class="form_input" value="{% if form.email.value %}{{form.email.value}}{% endif %}" required="required" type="text" placeholder="example@gmail.com"/>
+
+                    <label for="password" class="form_label" data-icon="p"> пароль <span style="color: brown;">*</span></label>
+                    <input id="password" name="password" class="form_input" required="required" type="password" placeholder="***********" />
+                    <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                    <p class="reset-password-link" style="width: 80%; margin-bottom: 10px;">             
+                        <a href="{% url 'user:password_reset' %}">Забыли пароль?</a>
+                    </p>
+                    
+                    <p class="login_btn">
+                        <button type='submit'>Войти</button>
+                        <div class="fr2">
+                            <p style="color: white; opacity: 0.7; margin-right: 5px; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">У вас нету аккаунта?😕 |</p>
+                            <a href="{% url "user:register" %}">Зарегистрироваться</a>
+                        </div>
+                    </p> 
+
+                </div>
+    
+            </form>
+        </div>
+    </main>
+    
+    <script src="{% static "js/systemlogin.js" %}"></script>
+</body>
+</html>

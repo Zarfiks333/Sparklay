@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Dela+Gothic+One&family=Geologica:wght@100..900&family=Roboto+Slab:wght@100..900&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&display=swap');
+
+main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content{
+    width: 80%;
+    height: calc(100vh - 90px);
+}
+
+.top-content{
+    display: flex;
+    height: 80%;
+}
+
+.right-content{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.right-content::before{
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    background-color: #7650A0;
+    filter: blur(150px);
+    width: 200px;
+    height: 200px;
+    top: 15%;
+    right: 15%;
+}
+
+.right-content p{
+    opacity: 0.8;
+    position: absolute;
+    margin-top: 90%;
+    font-family: "Geologica", sans-serif;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+}
+
+.left-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-content h2{
+    line-height: 65px;
+    border-radius: 25px;
+    font-family: "Geologica", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.left-content::before{
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    background-color: #7650A0;
+    filter: blur(200px);
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 15%;
+}
+
+
+.right-content{
+    display: flex;
+}
+
+.bottom-content{
+    height: 20%;
+}
+
+.bottom-content ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bottom-content button{
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    color: white;
+    padding: 15px 25px;
+}
+
+.bottom-content::before{
+    content: '';
+    top: 625px;
+    left: 525px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    filter: blur(10px);
+}
+
+.bottom-content button:hover{
+    opacity: 0.9;
+}
+
+.bottom-content button:active{
+    position: relative;
+    top: 1px;
+}
+
+#btn-download{
+    position: relative;
+    color: black;
+    background: white;
+    border-radius: 15px;
+}
+
+#btn-login-web{
+    position: relative;
+    color: rgb(255, 255, 255);
+    border: solid 1px rgb(150, 119, 185);
+    background: linear-gradient(150deg, rgba(115,77,158,1) 0%, rgb(137, 108, 170) 100%);
+    border-radius: 15px;
+}
+
+#btn-login-web:hover::before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 0;
+    bottom: 0;
+    left: -5.8px;
+    width: 104%;
+    height: 120%;
+    border: solid 1px rgb(150, 119, 185);
+    border-radius: 17px;
+}
+
+.center-content{
+    height: 100vh;
+}
